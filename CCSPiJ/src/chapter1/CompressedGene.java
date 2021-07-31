@@ -69,6 +69,7 @@ public class CompressedGene {
 			final int firstBit = (bitSet.get(i) ? 1 : 0);
 			final int secondBit = (bitSet.get(i + 1) ? 1 : 0);
 			final int lastBits = firstBit << 1 | secondBit;
+			System.out.println("lastBits = " + lastBits);
 			switch (lastBits) {
 			case 0b00: // 00 is 'A'
 				builder.append('A');

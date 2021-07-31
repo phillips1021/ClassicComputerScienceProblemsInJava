@@ -79,14 +79,14 @@ public class UnweightedGraph<V> extends Graph<V, Edge> {
 		cityGraph.addEdge("Philadelphia", "Washington");
 		System.out.println(cityGraph.toString());
 
-		Node<String> bfsResult = GenericSearch.bfs("Boston",
-				v -> v.equals("Miami"),
+		Node<String> bfsResult = GenericSearch.bfs("Chicago",
+				v -> v.equals("Philadelphia"),
 				cityGraph::neighborsOf);
 		if (bfsResult == null) {
 			System.out.println("No solution found using breadth-first search!");
 		} else {
 			List<String> path = GenericSearch.nodeToPath(bfsResult);
-			System.out.println("Path from Boston to Miami:");
+			System.out.println("Path from Chicago to Philadelphia:");
 			System.out.println(path);
 		}
 	}

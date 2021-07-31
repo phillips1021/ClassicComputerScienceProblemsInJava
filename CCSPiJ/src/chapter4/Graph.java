@@ -74,6 +74,7 @@ public abstract class Graph<V, E extends Edge> {
 
 	// Look up a vertice's index and find its neighbors (convenience method)
 	public List<V> neighborsOf(V vertex) {
+		System.out.printf("Neighbors of %s are %s \n\n", vertex, neighborsOf(indexOf(vertex)));
 		return neighborsOf(indexOf(vertex));
 	}
 

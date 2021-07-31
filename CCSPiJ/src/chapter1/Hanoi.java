@@ -47,10 +47,11 @@ public class Hanoi {
 
 	public static void main(String[] args) {
 		Hanoi hanoi = new Hanoi(3);
+		System.out.println("Tower A at start: " + hanoi.towerA);
 		hanoi.solve();
 		System.out.println(hanoi.towerA);
 		System.out.println(hanoi.towerB);
-		System.out.println(hanoi.towerC);
+		System.out.printf("Tower C at end %s%n", hanoi.towerC);
 	}
 
 }

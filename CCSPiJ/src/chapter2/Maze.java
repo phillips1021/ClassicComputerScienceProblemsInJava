@@ -185,7 +185,9 @@ public class Maze {
 
 	public static void main(String[] args) {
 		Maze m = new Maze();
+		System.out.println("Maze");
 		System.out.println(m);
+		System.out.println("\n\n");
 
 		Node<MazeLocation> solution1 = GenericSearch.dfs(m.start, m::goalTest, m::successors);
 		if (solution1 == null) {
@@ -193,7 +195,9 @@ public class Maze {
 		} else {
 			List<MazeLocation> path1 = GenericSearch.nodeToPath(solution1);
 			m.mark(path1);
+			System.out.println("Maze solved using depth first search");
 			System.out.println(m);
+			System.out.println("\n\n");
 			m.clear(path1);
 		}
 
@@ -203,7 +207,9 @@ public class Maze {
 		} else {
 			List<MazeLocation> path2 = GenericSearch.nodeToPath(solution2);
 			m.mark(path2);
+			System.out.println("Maze solved using breadth first search");
 			System.out.println(m);
+			System.out.println("\n\n");
 			m.clear(path2);
 		}
 
@@ -213,7 +219,9 @@ public class Maze {
 		} else {
 			List<MazeLocation> path3 = GenericSearch.nodeToPath(solution3);
 			m.mark(path3);
+			System.out.println("Maze solved using a * search");
 			System.out.println(m);
+			System.out.println("\n\n");
 			m.clear(path3);
 		}
 	}
